@@ -1,7 +1,17 @@
+html {
+overflow: hidden;
+}
 body {
-padding: 0px
-};
+overflow: hidden;
+padding: 0px;
+}
 canvas {
-margin: 0px,
-background-color: "lightblue"
-};
+overflow: hidden;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin:auto;
+background-color: lightblue;
+}
