@@ -48,11 +48,13 @@ this.color = color;
 this.radius = radius;
 }
 Draw() {
+this.ctx.save();
 this.ctx.fillStyle = this.color;
 this.ctx.beginPath();
 this.ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2);
 this.ctx.fill();
 this.ctx.closePath();
+this.ctx.restore();
 }
 CheckEdges() {
 if(this.pos.x + this.radius > this.canvas.width) {
