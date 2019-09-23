@@ -1,13 +1,13 @@
 var canvas = document.getElementById("view");
 canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.height = innerHeight * 3;
 var ctx = canvas.getContext("2d");
 var circles = [];
 function randomInt(max) {
 return Math.floor(Math.random() * max);
 }
 
-for(let i = 0; i < 1000; i++) {
+for(let i = 0; i < 2000; i++) {
 circles.push(new CanvasGameEngine.Circle(randomInt(canvas.width), randomInt(canvas.height), randomInt(4) + 2, randomInt(4) + 2, randomInt(30) + 20, `hsl(${randomInt(360)}, ${randomInt(100)}%, ${randomInt(100)}%)`));
 }
 
