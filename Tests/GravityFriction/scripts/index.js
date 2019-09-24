@@ -8,6 +8,7 @@ function randomInt(max) {
 return Math.floor(Math.random() * max);
 }
 var test = new CanvasGameEngine.Rect(0, 100, 3, -6, 50, 50, "#3e8db8");
+test.gravity = 1.5;
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
