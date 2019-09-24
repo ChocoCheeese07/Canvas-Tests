@@ -5,6 +5,8 @@ this.canvas = document.getElementById("view");
 this.ctx = this.canvas.getContext("2d");
 this.pos = {x: posX, y: posY};
 this.vel = {x: velX, y: velY};
+this.gravity = 0;
+this.acceleration = 0;
 this.color = color;
 this.width = w;
 this.height = h;
@@ -24,7 +26,7 @@ this.vel.x = -this.vel.x;
 };
 if(this.pos.y + this.height > this.canvas.height) {
 this.pos.y = this.canvas.height - this.height;
-this.vel.y = -this.vel.y;
+this.vel.y = -this.vel.y * .2;
 };
 if(this.pos.y < 0) {
 this.pos.y = 0;
@@ -32,6 +34,8 @@ this.vel.y = -this.vel.y;
 };
 }
 Update() {
+this.vel.x += this.acceleration;
+this.vel.y += this.gravity;
 this.pos.x += this.vel.x;
 this.pos.y += this.vel.y;
 this.CheckEdges();
