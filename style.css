@@ -4,6 +4,6 @@ margin: auto;
 text-align: center;
 }
 #TestLinks ul li a{
-margin: auto;
-text-align: center;
+font: 20px Arial, Helvetica;
+color: lightblue;
 }
