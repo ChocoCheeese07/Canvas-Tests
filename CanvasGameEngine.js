@@ -26,7 +26,7 @@ this.vel.x = -this.vel.x;
 };
 if(this.pos.y + this.height > this.canvas.height) {
 this.pos.y = this.canvas.height - this.height;
-this.vel.y = -this.vel.y * .2;
+this.vel.y = -this.vel.y * .9;
 };
 if(this.pos.y < 0) {
 this.pos.y = 0;
