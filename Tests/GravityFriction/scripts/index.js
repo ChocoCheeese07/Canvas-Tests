@@ -11,7 +11,7 @@ var test = new CanvasGameEngine.Rect(0, 100, 3, -6, 50, 50, "#3e8db8");
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-test.update();
+test.Update();
   
 requestAnimationFrame(update)
 }
