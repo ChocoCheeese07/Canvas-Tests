@@ -1,4 +1,6 @@
-var canvas = document.getElementById("view");
+var canvas = document.createElement("canvas");
+canvas.id = "view";
+document.body.appendChild(canvas);
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 var ctx = canvas.getContext("2d");
