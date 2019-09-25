@@ -7,9 +7,14 @@ this.pos = {x: posX, y: posY};
 this.vel = {x: velX, y: velY};
 this.gravity = 0;
 this.acceleration = 0;
+this.bounciness = 0;
 this.color = color;
 this.width = w;
 this.height = h;
+}
+SetVelocity(x, y){
+this.vel.x = x;
+this.vel.y = y;
 }
 Draw() {
 this.ctx.fillStyle = this.color;
@@ -26,7 +31,7 @@ this.vel.x = -this.vel.x;
 };
 if(this.pos.y + this.height > this.canvas.height) {
 this.pos.y = this.canvas.height - this.height;
-this.vel.y = -this.vel.y * .9;
+this.vel.y = -this.vel.y * (this.bounciness / 100);
 };
 if(this.pos.y < 0) {
 this.pos.y = 0;
@@ -48,8 +53,15 @@ this.canvas = document.getElementById("view");
 this.ctx = this.canvas.getContext("2d");
 this.pos = {x: posX, y: posY};
 this.vel = {x: velX, y: velY};
+this.gravity = 0;
+this.acceleration = 0;
+this.bounciness = 0;
 this.color = color;
 this.radius = radius;
+}
+SetVelocity(x, y){
+this.vel.x = x;
+this.vel.y = y;
 }
 Draw() {
 this.ctx.save();
@@ -71,7 +83,7 @@ this.vel.x = -this.vel.x;
 }
 if(this.pos.y + this.radius > this.canvas.height) {
 this.pos.y = this.canvas.height - this.radius;
-this.vel.y = -this.vel.y;
+this.vel.y = -this.vel.y * (this.bounciness / 100);
 }
 if(this.pos.y - this.radius < 0) {
 this.pos.y = this.radius;
@@ -79,6 +91,8 @@ this.vel.y = -this.vel.y;
 }
 }
 Update() {
+this.vel.x += this.acceleration;
+this.vel.y += this.gravity;
 this.pos.x += this.vel.x;
 this.pos.y += this.vel.y;
 this.CheckEdges();

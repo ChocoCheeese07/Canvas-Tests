@@ -1,8 +1,8 @@
 var canvas = document.createElement("canvas");
-canvas.id = "view";
-document.body.appendChild(canvas);
 canvas.width = innerWidth;
 canvas.height = innerHeight;
+canvas.id = "view";
+document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d");
 var circles = [];
 function randomInt(max) {
