@@ -1,7 +1,7 @@
 var CanvasGameEngine = {
 randomInt: function (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+},
 Rect : class Rect {
 constructor(posX, posY, velX, velY, w, h, color) {
 this.canvas = document.getElementById("view");
