@@ -1,8 +1,8 @@
 html, body {
-    margin: none;
-    padding: none;
+    margin: 0px;
 }
 #Main-Header {
+    margin-top: 0px;
     padding: 20px;
     font: 20px 'Turret Road';
     color: white;
