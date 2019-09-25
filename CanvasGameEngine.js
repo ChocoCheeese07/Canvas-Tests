@@ -5,8 +5,10 @@ this.canvas = document.getElementById("view");
 this.ctx = this.canvas.getContext("2d");
 this.pos = {x: posX, y: posY};
 this.vel = {x: velX, y: velY};
+this.frictionEnabled = false;
 this.gravity = 0;
 this.acceleration = 0;
+this.friction = 90;
 this.bounciness = 0;
 this.color = color;
 this.width = w;
@@ -31,7 +33,12 @@ this.vel.x = -this.vel.x;
 };
 if(this.pos.y + this.height > this.canvas.height) {
 this.pos.y = this.canvas.height - this.height;
+if(this.frictionEnabled === true) {
+this.vel.x = this.vel.x * (this.friction / 100);
 this.vel.y = -this.vel.y * (this.bounciness / 100);
+} else {
+this.vel.y = -this.vel.y;
+};
 };
 if(this.pos.y < 0) {
 this.pos.y = 0;
@@ -55,6 +62,7 @@ this.pos = {x: posX, y: posY};
 this.vel = {x: velX, y: velY};
 this.gravity = 0;
 this.acceleration = 0;
+this.friction = 90;
 this.bounciness = 0;
 this.color = color;
 this.radius = radius;
@@ -83,7 +91,12 @@ this.vel.x = -this.vel.x;
 }
 if(this.pos.y + this.radius > this.canvas.height) {
 this.pos.y = this.canvas.height - this.radius;
-this.vel.y = -this.vel.y * (this.bounciness / 100);
+if(this.frictionEnabled === true) {
+    this.vel.x = this.vel.x * (this.friction / 100);
+    this.vel.y = -this.vel.y * (this.bounciness / 100);
+    } else {
+    this.vel.y = -this.vel.y;
+    };
 }
 if(this.pos.y - this.radius < 0) {
 this.pos.y = this.radius;
