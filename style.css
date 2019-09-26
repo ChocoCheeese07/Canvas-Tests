@@ -4,7 +4,7 @@ html, body {
 #Main-Header {
     margin-top: 0px;
     padding: 20px;
-    font: 20px 'Turret Road';
+    font: 20px "Turret Road";
     color: white;
     background-color: black;
 }
@@ -21,4 +21,9 @@ margin-right: 2%;
 font: 20px Arial, Helvetica;
 color: lightblue;
 text-decoration: none;
+}
+#credits {
+ text-decoration: none;
+ font-family: "Turret Road";
+ color: #277539;
 }
