@@ -23,7 +23,7 @@ this.vel.y = y;
 }
 Draw() {
 this.ctx.fillStyle = this.color;
-this.ctx.fillRect(this.pos.x, this.pos.y, this.width, this.height);
+this.ctx.fillRect(this.pos.x - this.width / 2, this.pos.y - this.height / 2, this.width, this.height);
 }
 CheckEdges() {
 if(this.pos.x + this.width > this.canvas.width) {
