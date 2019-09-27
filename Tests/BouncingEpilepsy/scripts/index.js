@@ -17,7 +17,7 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 // ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 for(i in circles) {
-    circles[i].color = `hsl(${CanvasGameEngine.randomInt(0, 360)}, ${CanvasGameEngine.randomInt(0, 100)}%, ${CanvasGameEngine.randomInt(0, 100)}%)`;
+    circles[i].color = `hsl(${CanvasGameEngine.randomInt(0, 360)}, ${CanvasGameEngine.randomInt(0, 100)}%, ${CanvasGameEngine.randomInt(75, 100)}%)`;
     circles[i].Update();
 }
 
