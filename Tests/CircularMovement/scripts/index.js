@@ -6,7 +6,7 @@ document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d");
 
 var angle = 0;
-var r = 50;
+var r = 125;
 var rect1 = new CanvasGameEngine.Rect(canvas.width / 2 + Math.cos(angle) * r, canvas.height / 2 + Math.sin(angle) * r, 0, 0, 100, 100, "red");
 
 function update() {
