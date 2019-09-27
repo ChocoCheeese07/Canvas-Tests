@@ -48,13 +48,17 @@ this.pos.y = 0;
 this.vel.y = -this.vel.y;
 };
 }
+PreUpdate() {}
+PostUpdate() {}
 Update() {
+this.PreUpdate();
 this.vel.x += this.acceleration;
 this.vel.y += this.gravity;
 this.pos.x += this.vel.x;
 this.pos.y += this.vel.y;
 this.CheckEdges();
 this.Draw();
+this.PostUpdate();
 }
 },
 Circle : class Circle {
