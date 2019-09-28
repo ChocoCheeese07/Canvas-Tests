@@ -22,7 +22,9 @@ rect4.pathRadius = 230;
 
 
 function update() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(173, 216, 230, .1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     rect1.angle += -.1;
     rect1.pos.x = canvas.width / 2 + Math.cos(rect1.angle) * rect1.pathRadius;
