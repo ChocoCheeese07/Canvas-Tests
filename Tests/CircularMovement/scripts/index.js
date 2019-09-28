@@ -43,13 +43,14 @@ function update() {
     rect4.pos.y = canvas.height / 2 + Math.sin(rect4.angle) * rect4.pathRadius;
     
     rect5.angle += -.06;
-    rect5.pos.x = canvas.width / 2 + Math.cos(rect3.angle) * rect3.pathRadius;
-    rect3.pos.y = canvas.height / 2 + Math.sin(rect3.angle) * rect3.pathRadius;
+    rect5.pos.x = canvas.width / 2 + Math.cos(rect5.angle) * rect5.pathRadius;
+    rect5.pos.y = canvas.height / 2 + Math.sin(rect5.angle) * rect5.pathRadius;
 
     rect1.Update();
     rect2.Update();
     rect3.Update();
     rect4.Update();
+    rect5.Update();
 
     requestAnimationFrame(update)
 }
