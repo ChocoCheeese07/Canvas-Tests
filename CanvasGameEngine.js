@@ -67,6 +67,7 @@ this.canvas = document.getElementById("view");
 this.ctx = this.canvas.getContext("2d");
 this.pos = {x: posX, y: posY};
 this.vel = {x: velX, y: velY};
+this.frictionEnabled = false;
 this.gravity = 0;
 this.acceleration = 0;
 this.friction = 90;
@@ -110,13 +111,17 @@ this.pos.y = this.radius;
 this.vel.y = -this.vel.y;
 }
 }
+PreUpdate() {}
+PostUpdate() {}
 Update() {
+this.PreUpdate();
 this.vel.x += this.acceleration;
 this.vel.y += this.gravity;
 this.pos.x += this.vel.x;
 this.pos.y += this.vel.y;
 this.CheckEdges();
 this.Draw();
+this.PostUpdate();
 }
 }
 }
