@@ -5,19 +5,19 @@ canvas.id = "view";
 document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d");
 
-var rect1 = new CanvasGameEngine.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "blue");
+var rect1 = new CGE.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "blue");
 rect1.angle = Math.PI;
 rect1.pathRadius = 50;
-var rect2 = new CanvasGameEngine.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "red");
+var rect2 = new CGE.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "red");
 rect2.angle = 0;
 rect2.pathRadius = 110;
-var rect3 = new CanvasGameEngine.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "blue");
+var rect3 = new CGE.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "blue");
 rect3.angle = Math.PI;
 rect3.pathRadius = 170;
-var rect4 = new CanvasGameEngine.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "red");
+var rect4 = new CGE.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "red");
 rect4.angle = 0;
 rect4.pathRadius = 230;
-var rect5 = new CanvasGameEngine.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "blue");
+var rect5 = new CGE.Rect(canvas.width / 2, canvas.height / 2, 0, 0, 50, 50, "blue");
 rect5.angle = Math.PI;
 rect5.pathRadius = 290;
 
