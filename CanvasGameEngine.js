@@ -9,6 +9,7 @@ var CGE = {
       this.pos = {x: posX, y: posY};
       this.vel = {x: velX, y: velY};
       this.objectType = "Rectangle";
+      this.detectEdges = true;
       this.frictionEnabled = false;
       this.gravity = 0;
       this.acceleration = 0;
@@ -57,7 +58,9 @@ var CGE = {
       this.vel.y += this.gravity;
       this.pos.x += this.vel.x;
       this.pos.y += this.vel.y;
-      this.CheckEdges();
+      if(this.detectEdges === true) {
+        this.CheckEdges();
+      };
       this.Draw();
       this.PostUpdate();
     }
@@ -75,6 +78,7 @@ var CGE = {
         y: velY
       };
       this.objectType = "Circle";
+      this.detectEdges = true;
       this.frictionEnabled = false;
       this.gravity = 0;
       this.acceleration = 0;
