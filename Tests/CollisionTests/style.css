@@ -1,0 +1,17 @@
+html {
+    overflow: hidden;
+    }
+    body {
+    overflow: hidden;
+    padding: 0px;
+    }
+    canvas {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    background-color: lightblue;
+    }
