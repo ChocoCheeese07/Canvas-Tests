@@ -29,15 +29,15 @@ var CGE = {
     }
     CheckEdges() {
       if (this.pos.x + (this.width / 2) > this.canvas.width) {
-        this.pos.x = this.canvas.width - this.width;
+        this.pos.x = this.canvas.width + (this.width / 2);
         this.vel.x = -this.vel.x;
       };
       if (this.pos.x - (this.width / 2) < 0) {
-        this.pos.x = 0;
+        this.pos.x = this.width / 2;
         this.vel.x = -this.vel.x;
       };
       if (this.pos.y + (this.height / 2) > this.canvas.height) {
-        this.pos.y = this.canvas.height - this.height;
+        this.pos.y = this.canvas.height - (this.height / 2);
         if (this.frictionEnabled === true) {
           this.vel.x = this.vel.x * (this.friction / 100);
           this.vel.y = -this.vel.y * (this.bounciness / 100);
@@ -46,7 +46,7 @@ var CGE = {
         };
       };
       if (this.pos.y - (this.height / 2) < 0) {
-        this.pos.y = 0;
+        this.pos.y = this.height / 2;
         this.vel.y = -this.vel.y;
       };
     }
