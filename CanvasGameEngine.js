@@ -29,7 +29,7 @@ var CGE = {
     }
     CheckEdges() {
       if (this.pos.x + (this.width / 2) > this.canvas.width) {
-        this.pos.x = this.canvas.width + (this.width / 2);
+        this.pos.x = this.canvas.width - (this.width / 2);
         this.vel.x = -this.vel.x;
       };
       if (this.pos.x - (this.width / 2) < 0) {
