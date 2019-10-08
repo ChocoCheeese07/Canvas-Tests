@@ -28,15 +28,15 @@ var CGE = {
       this.ctx.fillRect(this.pos.x - this.width / 2, this.pos.y - this.height / 2, this.width, this.height);
     }
     CheckEdges() {
-      if (this.pos.x + this.width > this.canvas.width) {
+      if (this.pos.x + (this.width / 2) > this.canvas.width) {
         this.pos.x = this.canvas.width - this.width;
         this.vel.x = -this.vel.x;
       };
-      if (this.pos.x < 0) {
+      if (this.pos.x - (this.width / 2) < 0) {
         this.pos.x = 0;
         this.vel.x = -this.vel.x;
       };
-      if (this.pos.y + this.height > this.canvas.height) {
+      if (this.pos.y + (this.height / 2) > this.canvas.height) {
         this.pos.y = this.canvas.height - this.height;
         if (this.frictionEnabled === true) {
           this.vel.x = this.vel.x * (this.friction / 100);
@@ -45,7 +45,7 @@ var CGE = {
           this.vel.y = -this.vel.y;
         };
       };
-      if (this.pos.y < 0) {
+      if (this.pos.y - (this.height / 2) < 0) {
         this.pos.y = 0;
         this.vel.y = -this.vel.y;
       };
