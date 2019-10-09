@@ -146,6 +146,13 @@ var CGE = {
       rect1.vel.y = -rect1.vel.y;
       rect2.vel.x = -rect2.vel.x;
       rect2.vel.y = -rect2.vel.y;
+      if((rect1.pos.x < rect2.pos.x && rect1.vel.x > 0) || rect1.pos.x < rect2.pos.x && rect1.vel.x < 0) {
+        rect1.vel.x = -rect1.vel.x;
+        rect2.vel.x = -rect2.vel.x;
+      } else if((rect1.pos.y < rect2.pos.y && rect1.vel.y > 0) || rect1.pos.x < rect2.pos.x && rect1.vel.x < 0) {
+        rect1.vel.y = -rect1.vel.y;
+        rect2.vel.y = -rect2.vel.y;
+      }
     };
   }
 }
