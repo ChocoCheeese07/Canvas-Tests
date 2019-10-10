@@ -158,7 +158,16 @@ var CGE = {
     };
   },
   CircleCircleCollision(circle1, circle2) {
+    var distX = circle1.pos.x - circle2.pos.x;
+    var distY = circle1.pos.y - circle2.pos.y;
+    var distance = Math.sqrt(distX ** 2 + distY ** 2);
     
+    if(distance < circle1.radius + circle2.radius) {
+      circle1.vel.x = -circle1.vel.x;
+      circle1.vel.y = -circle1.vel.y;
+      circle2.vel.x = -circle2.vel.x;
+      circle2.vel.y = -circle2.vel.y;
+    };
   }
 }
 class Scene {
