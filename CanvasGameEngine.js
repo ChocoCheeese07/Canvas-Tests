@@ -156,6 +156,9 @@ var CGE = {
         rect2.vel.y = -rect2.vel.y;
       }
     };
+  },
+  CircleCircleCollision(circle1, circle2) {
+    
   }
 }
 class Scene {
