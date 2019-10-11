@@ -22,7 +22,7 @@ var circle2 = new CGE.Circle(canvas.width, 0, 2, 2, 50, "red");
 function checkAllRectCollisions(array = []) {
   for(let i in array) {
     for(let j in array) {
-      CGE.RectRectCollison(array[i], array[j]);
+      CGE.RectRectCollision(array[i], array[j]);
     }
   }
 }
