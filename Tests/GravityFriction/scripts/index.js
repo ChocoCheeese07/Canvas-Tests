@@ -15,9 +15,12 @@ var circle2 = new CGE.Circle(canvas.width, 100, -3, -6, 50, "#3e8db8")
 circle2.gravity = 1.5;
 circle2.bounciness = 85;
 circle2.frictionEnabled = true;
+
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+CGE.CircleCircleCollision(circle1, circle2);
+  
 circle1.Update();
 circle2.Update();
   
