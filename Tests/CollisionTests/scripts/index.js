@@ -16,7 +16,9 @@ var rects = [
 
 var circles = [
   new CGE.Circle(canvas.width / 4, 0, 2, 2, 50, "red"),
-  new CGE.Circle(canvas.width - canvas.width / 4, 0, -2, 2, 50, "red")
+  new CGE.Circle(canvas.width - canvas.width / 4, 0, -2, 2, 50, "red"),
+  new CGE.Circle(canvas.width / 4, canvas.height, 2, 2, 50, "red"),
+  new CGE.Circle(canvas.width - canvas.width / 4, canvas.height, -2, 2, 50, "red")
 ];
 
 function checkAllRectCollisions(array = []) {
