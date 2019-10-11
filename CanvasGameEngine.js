@@ -163,10 +163,19 @@ var CGE = {
     var distance = Math.sqrt(distX ** 2 + distY ** 2);
     
     if(distance < circle1.radius + circle2.radius) {
-      circle1.vel.x = -circle1.vel.x;
-      circle1.vel.y = -circle1.vel.y;
-      circle2.vel.x = -circle2.vel.x;
-      circle2.vel.y = -circle2.vel.y;
+      if(circle1.pos.x < circle2.pos.x && circle1.vel.x > 0) {
+        circle1.vel.x = -circle1.vel.x;
+        circle2.vel.x = -circle2.vel.x;
+      } else if (circle1.pos.x > circle2.pos.x && circle1.vel.x < 0) {
+        circle1.vel.x = -circle1.vel.x;
+        circle2.vel.x = -circle2.vel.x;
+      } else if(circle1.pos.y < circle2.pos.y && circle1.vel.y > 0) {
+        circle1.vel.y = -circle1.vel.y;
+        circle2.vel.y = -circle2.vel.y;
+      } else if (circle1.pos.y > circle2.pos.y && circle1.vel.y < 0) {
+        circle1.vel.y = -circle1.vel.y;
+        circle2.vel.y = -circle2.vel.y;
+      }
     };
   }
 }
