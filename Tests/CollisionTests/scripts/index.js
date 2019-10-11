@@ -14,8 +14,11 @@ var rects = [
   new CGE.Rect(0, canvas.height, 2, 2, 50, 50, "blue")
 ]
 
-var circle1 = new CGE.Circle(canvas.width / 4, 0, 2, 2, 50, "red");
-var circle2 = new CGE.Circle(canvas.width - canvas.width / 4, 0, -2, 2, 50, "red");
+var circles = [
+  new CGE.Circle(canvas.width / 4, 0, 2, 2, 50, "red"),
+  new CGE.Circle(canvas.width - canvas.width / 4, 0, -2, 2, 50, "red")
+];
+
 function checkAllRectCollisions(array = []) {
   for(let i in array) {
     for(let j in array) {
@@ -23,14 +26,20 @@ function checkAllRectCollisions(array = []) {
     }
   }
 }
+function checkAllCircleCollisions(array = []) {
+  for(let i in array) {
+    for(let j in array) {
+      CGE.CircleCircleCollision(array[i], array[j]);
+    }
+  }
+}
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-CGE.CircleCircleCollision(circle1, circle2);
-
-circle1.Update();
-circle2.Update();
-
+checkAllCircleCollisions(circles);
+for(let i in circles) {
+  circles[i].Update();
+}
 checkAllRectCollisions(rects);
 for(let i in rects) {
   rects[i].Update();
