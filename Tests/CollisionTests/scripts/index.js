@@ -8,17 +8,17 @@ function randomInt(max) {
 return Math.floor(Math.random() * max);
 }
 var rects = [
-  new CGE.Rect(0, 0, 2,  2, 50, 50, "blue"),
-  new CGE.Rect(canvas.width, 0, 2, 2, 50, 50, "blue"),
-  new CGE.Rect(canvas.width, canvas.height, 2, 2, 50, 50, "blue"),
-  new CGE.Rect(0, canvas.height, 2, 2, 50, 50, "blue")
+  new CGE.Rect(0, 0, 2,  2, 50, 50, "rgba(0, 0, 255, .50)"),
+  new CGE.Rect(canvas.width, 0, 2, 2, 50, 50, "rgba(0, 0, 255, .50)"),
+  new CGE.Rect(canvas.width, canvas.height, 2, 2, 50, 50, "rgba(0, 0, 255, .50)"),
+  new CGE.Rect(0, canvas.height, 2, 2, 50, 50, "rgba(0, 0, 255, .50)")
 ]
 
 var circles = [
-  new CGE.Circle(canvas.width / 4, 0, 2, 2, 50, "red"),
-  new CGE.Circle(canvas.width - canvas.width / 4, 0, -2, 2, 50, "red"),
-  new CGE.Circle(canvas.width / 4, canvas.height, 2, 2, 50, "red"),
-  new CGE.Circle(canvas.width - canvas.width / 4, canvas.height, -2, 2, 50, "red")
+  new CGE.Circle(canvas.width / 4, 0, 2, 2, 50, "rgba(255, 0, 0, .50)"),
+  new CGE.Circle(canvas.width - canvas.width / 4, 0, -2, 2, 50, "rgba(255, 0, 0, .50)"),
+  new CGE.Circle(canvas.width / 4, canvas.height, 2, 2, 50, "rgba(255, 0, 0, .50)"),
+  new CGE.Circle(canvas.width - canvas.width / 4, canvas.height, -2, 2, 50, "rgba(255, 0, 0, .50)")
 ];
 
 function checkAllRectCollisions(array = []) {
