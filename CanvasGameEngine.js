@@ -194,8 +194,13 @@ var CGE = {
     if(circle.pos.x > rect.pos.x + rect.width / 2) testX = right;
     if(circle.pos.y < rect.pos.y - rect.height / 2) testY = above;
     if(circle.pos.y > rect.pos.y + rect.height / 2) testY = below;
-    if () {
-        
+    var distance = CGE.GetDistance(circle.pos.x, testX, circle.pos.y, testY);
+    if(distance <= circle.radius) {
+       circle.vel.x = -circle.vel.x;
+       circle.vel.y = -circle.vel.y;
+       rect.vel.x = -rect.vel.x;
+       rect.vel.y = -rect.vel.y;
+      
     }
   }
 }
