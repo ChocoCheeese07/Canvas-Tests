@@ -45,6 +45,7 @@ function CheckAllCircleRectCollisions(circleArray = [], rectArray = []) {
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+CheckAllCircleRectCollisions(circles, rects);
 checkAllCircleCollisions(circles);
 for(let i in circles) {
   circles[i].Update();
