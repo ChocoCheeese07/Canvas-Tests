@@ -136,6 +136,11 @@ var CGE = {
       this.PostUpdate();
     }
   },
+  GetDistance(point1X, point2X, point1Y, point2Y) {
+    var distX = point1X - point2X;
+    var distY = point1Y - point2Y;
+    return Math.sqrt(distX ** 2 + distY ** 2);
+  },
   RectRectCollision(rect1, rect2) {
     if(rect1.pos.x - rect1.width / 2 < rect2.pos.x + rect2.width / 2 &&
        rect1.pos.x + rect1.width / 2 > rect2.pos.x - rect2.width / 2 &&
@@ -177,8 +182,20 @@ var CGE = {
         circle2.vel.y = -circle2.vel.y;
       }
     };
+  },
+  CircleRectCollision(rect, circle) {
+    var testX;
+    var testY;
+    var left = rect.pos.x - rect.width / 2;
+    var right = rect.pos.x + rect.width / 2;
+    var above = rect.pos.y - rect.height / 2;
+    var below = rect.pos.y + rect.height / 2;
+    if(circle.pos.x < rect.pos.x - rect.width / 2) testX = left;
+    if(circle.pos.x > rect.pos.x + rect.width / 2) testX = right;
+    if(circle.pos.y < rect.pos.y - rect.height / 2) testY = above;
+    if(circle.pos.y > rect.pos.y + rect.height / 2) testY = below;
+    if () {
+        
+    }
   }
-}
-class Scene {
-
 }
