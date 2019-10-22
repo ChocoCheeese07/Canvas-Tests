@@ -27,14 +27,21 @@ function checkAllRectCollisions(array = []) {
       CGE.RectRectCollision(array[i], array[j]);
     }
   }
-}
+};
 function checkAllCircleCollisions(array = []) {
   for(let i in array) {
     for(let j in array) {
       CGE.CircleCircleCollision(array[i], array[j]);
     }
   }
-}
+};
+function CheckAllCircleRectCollisions(circleArray = [], rectArray = []) {
+  for(let i in circleArray) {
+    for(let j in rectArray) {
+      CGE.CircleRectCollision(circleArray[i], rectArray[j]);
+    }
+  }
+};
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
