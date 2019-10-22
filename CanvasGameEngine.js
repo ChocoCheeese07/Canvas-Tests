@@ -183,7 +183,7 @@ var CGE = {
       }
     };
   },
-  CircleRectCollision(rect, circle) {
+  CircleRectCollision(circle, rect) {
     var testX;
     var testY;
     var left = rect.pos.x - rect.width / 2;
