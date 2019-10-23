@@ -45,14 +45,14 @@ function CheckAllCircleRectCollisions(circleArray = [], rectArray = []) {
 function update() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-CheckAllCircleRectCollisions(circles, rects);
 checkAllCircleCollisions(circles);
-for(let i in circles) {
-  circles[i].Update();
-}
 checkAllRectCollisions(rects);
+CheckAllCircleRectCollisions(circles, rects);
 for(let i in rects) {
   rects[i].Update();
+}
+for(let i in circles) {
+  circles[i].Update();
 }
   
 requestAnimationFrame(update)
