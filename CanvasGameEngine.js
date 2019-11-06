@@ -86,6 +86,7 @@ var CGE = {
       this.bounciness = 0;
       this.color = color;
       this.radius = radius;
+      this.detectEdges = true;
     }
     SetVelocity(x, y) {
       this.vel.x = x;
@@ -131,7 +132,9 @@ var CGE = {
       this.vel.y += this.gravity;
       this.pos.x += this.vel.x;
       this.pos.y += this.vel.y;
+      if(this.detectEdges === true) {
       this.CheckEdges();
+      };
       this.Draw();
       this.PostUpdate();
     }
