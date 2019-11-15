@@ -4,4 +4,7 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 document.body.appendChild(canvas);
 
-ctx.fillRect(5, 5, 40, 40);
+ctx.moveTo(20, 45);
+ctx.lineTo(78, 93);
+ctx.closePath();
+ctx.stroke();
